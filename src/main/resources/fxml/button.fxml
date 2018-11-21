@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import com.soft1841.oop.week1.MyButton?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.oop.week1.ButtonController">
+    <MyButton text="美团"
+              AnchorPane.leftAnchor="100"
+              AnchorPane.topAnchor="100"/>
+    <MyButton text="设置"
+              AnchorPane.leftAnchor="260"
+              AnchorPane.topAnchor="100"/>
+</AnchorPane>
