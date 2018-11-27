@@ -1,7 +1,6 @@
 package com.soft1841.oop.week1;
 
 public class Student extends Human{
-    //重写的注解
     @Override
     public void eat() {
         //调用父类的方法

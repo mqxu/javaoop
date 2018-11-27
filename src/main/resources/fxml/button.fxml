@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.*?>
-
 <?import com.soft1841.oop.week1.MyButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.oop.week1.ButtonController">
-    <MyButton text="美团"
-              AnchorPane.leftAnchor="100"
-              AnchorPane.topAnchor="100"/>
-    <MyButton text="设置"
-              AnchorPane.leftAnchor="260"
-              AnchorPane.topAnchor="100"/>
+    <HBox spacing="20"  AnchorPane.leftAnchor="20" fx:id="hBox"
+          AnchorPane.topAnchor="20">
+        <MyButton text="美团">
+            <graphic>
+                <ImageView>
+                    <Image url="/img/pen.png"/>
+                </ImageView>
+            </graphic>
+        </MyButton>
+        <MyButton text="关注">
+            <graphic>
+                <ImageView>
+                    <Image url="/img/plus.png"/>
+                </ImageView>
+            </graphic>
+        </MyButton>
+        <Button text="圆角按钮" styleClass="border-button">
+            <graphic>
+                <ImageView>
+                    <Image url="/img/pen.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <padding>
+            <Insets top="30" left="30"/>
+        </padding>
+    </HBox>
 </AnchorPane>

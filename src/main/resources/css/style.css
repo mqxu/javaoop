@@ -1,0 +1,14 @@
+.border-button{
+    /*文本颜色*/
+    -fx-text-fill:#FFFFFF;
+    /*字体大小*/
+    -fx-font-size: 14px;
+    /*背景色*/
+    -fx-background-color: rgb(234, 111, 90);
+     /*设置圆角效果*/
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+    /*合适大小*/
+    -fx-pref-width: 120px;
+    -fx-pref-height: 35px;
+}
