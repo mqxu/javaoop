@@ -1,6 +1,12 @@
 package com.soft1841.oop.jdbc;
 
+/**
+ * 图书实体类
+ *
+ * @author moqi
+ */
 public class Book {
+    //属性建议都用包装类型,如int->Integer,float->Float,double->Double
     private Integer id;
     private String name;
     private Double price;
