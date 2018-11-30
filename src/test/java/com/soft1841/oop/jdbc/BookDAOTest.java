@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  * BookDAO接口测试类
+ *
  * @author moqi
  */
 public class BookDAOTest {
@@ -20,13 +21,19 @@ public class BookDAOTest {
         //调用bookDAO的查询方法，获取所有图书信息
         List<Entity> list = bookDAO.getAllBooks();
         //lambda表达式遍历List集合
-        list.forEach(entity -> System.out.println(entity.get("name") + "," + entity.get("price")));
+        list.forEach(entity -> System.out.println(entity.get("name")
+                + "," + entity.get("author")
+                + "," + entity.get("price")));
     }
 
     @Test
     public void insert() throws SQLException {
         //创建一个等待插入的Book对象，并通过重载的构造方法初始化属性的值
-        Book book = new Book("JavaScript", 45.4);
+        Book book = new Book(
+                "测试书籍",
+                "匿名",
+                8.88,
+                "https://img3.doubanio.com/view/subject/m/public/s2738366.jpg");
         //调用insert方法，返回一个整型数据，要么1，要么0
         int n = bookDAO.insert(book);
         //用断言判定期望值和实际值是否一致，如果一致单元测试就通过

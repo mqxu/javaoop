@@ -18,6 +18,8 @@ public class BookDAOImpl implements BookDAO {
                 Entity.create("t_book")   //注意表名不要写错
                         .set("name", book.getName())  //给必填字段传值
                         .set("price", book.getPrice())
+                        .set("cover",book.getCover())
+                        .set("author",book.getAuthor())
         );
     }
 

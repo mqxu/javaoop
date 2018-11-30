@@ -9,11 +9,16 @@ public class Book {
     //属性建议都用包装类型,如int->Integer,float->Float,double->Double
     private Integer id;
     private String name;
+    private String author;
     private Double price;
+    private String cover;
 
-    public Book(String name, Double price) {
+
+    public Book(String name, String author, Double price, String cover) {
         this.name = name;
+        this.author = author;
         this.price = price;
+        this.cover = cover;
     }
 
     public Book() {
@@ -43,12 +48,30 @@ public class Book {
         this.price = price;
     }
 
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", cover='" + cover + '\'' +
+                ", author='" + author + '\'' +
                 '}';
     }
 }

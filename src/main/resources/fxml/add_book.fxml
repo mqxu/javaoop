@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.soft1841.oop.jdbc.AddBookController"
+      prefHeight="400.0" prefWidth="600.0" spacing="20">
+    <TextField promptText="书名" fx:id="bookName"/>
+    <TextField promptText="作者" fx:id="bookAuthor"/>
+    <TextField promptText="价格" fx:id="bookPrice"/>
+    <TextField promptText="封面图" fx:id="bookCover"/>
+    <Button text="确认" onAction="#addBook"/>
+    <padding>
+        <Insets top="20" left="50" bottom="20"/>
+    </padding>
+</VBox>
