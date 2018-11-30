@@ -1,8 +1,6 @@
 package com.soft1841.oop.jdbc;
 
 import cn.hutool.db.Entity;
-import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -31,7 +30,7 @@ public class BookController implements Initializable {
     private BookDAO bookDAO = new BookDAOImpl();
 
     //定义一个集合对象
-    List<Entity> bookList = null;
+    private List<Entity> bookList = new ArrayList<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -63,7 +62,7 @@ public class BookController implements Initializable {
             //用来显示作者信息
             Label authorLabel = new Label(entity.getStr("author"));
             //用来显示图书价格(注意将double数据转换成String才能在标签显示)
-            Label priceLabel = new Label("售价：" + String.valueOf(entity.getDouble("price")));
+            Label priceLabel = new Label("价格:" + String.valueOf(entity.getDouble("price")));
             //用来显示图书封面
             ImageView bookImgView = new ImageView(new Image(entity.getStr("cover")));
             //设置图片大小
