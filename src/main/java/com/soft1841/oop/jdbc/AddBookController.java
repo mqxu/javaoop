@@ -25,6 +25,7 @@ public class AddBookController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("提示信息");
         alert.setHeaderText("消息：");
+        //根据新增成功或失败的结果，弹不同的提示信息
         if(n == 1){
             alert.setContentText("新增图书成功");
             alert.showAndWait();
